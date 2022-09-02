@@ -1,188 +1,125 @@
-img {
-	max-width: 100%;
-}
 .main{
-    padding-top: 21.5rem;
-    padding-left: 25rem;
-    padding-right: 25rem;
-    background-image: url(../i/bg-main.png);
+    background-image: url(../i/main-banner.jpg);
     background-size: cover;
-    height: 82.5rem;
-    background-repeat: no-repeat;
-    display: flex;
-    &__title{
-        font-size: 44px;
-        font-family: $font_1;
-        color:$white;
-    }
-    &__btn{
-        margin-top: 5rem;
-        color:$white;
-    }
-    &__col-img{
-        position: absolute;
-        right: 25rem;
-        @include bp($point_0){
-            width: 45%;
-            right: 25rem;
-        }
-    }
-  
-    &__col-img img{
-        // @include bp($point_0){
-        //     width: 70%;
-        // }
-    }
-    // &__screen::after {
-    //     content: url(../i/img-main.png);
-    //     position: absolute;
-    //     right: 25rem;
-    //     bottom: 0;
-    //     z-index: 3;
-    // }
-}
-.main__title span {
-    position: relative;
-
-}
-.main__title span::after{
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: -12px;
-    content: url(../i/icons/oval-text.svg);
-}
-.advant-block{
-    position: relative;
-    margin-top: -22rem;
-    background-image: url(../i/bg-block2.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
-    z-index: -1;
+    height: 100vh;
     background-position: center;
-    &__title{
-        margin-top: -10rem;
-        margin-bottom: 22rem;
+    background-repeat: no-repeat;
+    margin-bottom: 5.8rem;
+    &__btn{
+        // margin-bottom: 28.2rem;
+        margin-top: 6rem;
+        width: 31.7rem;
+        height: 7.5rem;
     }
-    &__row{
+}
+
+.advantages-block{
+    margin-bottom: 14rem;
+    &__item{
+        width: 23%;
+    }
+    &__list{
+        width: 100%;
         display: flex;
-        height: 50rem;
-        position: relative;
         justify-content: space-between;
+    }
+    &__img{
+        margin-bottom: 2.5rem;
+    }
+    &__item-title{
+        margin-bottom: 2.5rem;
+        font-size: 2.2rem;
+        font-family: $font_2;
+
+    }
+    &__item-text{
+        font-size: 1.8rem;
+        color: $gray;
+    }
+}
+
+.offer-block{
+    &__row{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__col{
         width: 100%;
     }
-    &__row::after{
-        top:-40%;
-        bottom: 0;
-        left: 33%;
-        position: absolute;
-        content: url('../i/img-plate.png');
-        @include bp($point_0){
-            left: 32%;
-        }
-    }
-}
-.advant-elem{
-    width: 44.5rem; 
-    height: 15.5rem; 
-    margin-left: -6%;
-    background: $black;
-    position: relative;
-    border-radius: 30px;
-    box-shadow: 14px 14px 30px rgba(0, 0, 0, 0.12);
-    z-index: 9;
-    &::before{
-        content: "";
-        display: block;
-        height: 25px;
-        width: 25px;
-        background-color: inherit;
-        border: inherit;
-        position: absolute;
-        top: calc(50% - 12px);
-        left: 96%;
-        clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
-        transform: rotate(-135deg);
-        border-radius: 0 0 0 0.3em;
-    }
-    
-
-    &__item{
-        position: relative;
-        height: 100%;
-        display: flex;
-        position: relative;
-        align-items: center;
-        justify-content: center;
-   
-    }
-
-    &__block{
-        margin-left: 2.5rem;
-        color: $white;
-    }
-
-    &__title{
-        margin-bottom: 1rem;
-        font-weight: 500;
-        font-size: 2rem;
-        font-family: $font_2;
+    &__button{
+        width: 27.9rem;
+        height: 7.5rem;
     }
     &__text{
-        width: 27rem;
-        font-size: 1.8rem;
-        font-family: $font_2;
+        width: 90%;
+    }
+    &__text p{
+        margin-bottom: 2rem;
+    }
+    &__contacts{
+        margin-top: 4.3rem;
+    }
+    &__contacts-item{
+        margin-bottom: 3rem;
+        display: flex;
+        align-items: center;
+    }
+    &__contacts-item img{
+        margin-right: 2.5rem;
+    }
+    &__contacts-item a{
+        color: $color3; 
     }
 }
-.advant-elem:nth-child(2n){
-    margin-left: 18%;
-    margin-top: 4rem;
-    background-color: #fff;
-}
-.visual-elem{
-   padding-top: 20rem;
-}
-.advant-elem-right{
-    width: 44.5rem; 
-    height: 15.5rem; 
-    margin-left: 22%;
-    background: $black;
-    position: relative;
-    border-radius: 30px;
-    box-shadow: 14px 14px 30px rgba(0, 0, 0, 0.12);
-    z-index: 9;
-    &::before{
-        content: "";
-        display: block;
-        height: 25px;
-        width: 25px;
-        background-color: inherit;
-        border: inherit;
-        position: absolute;
-        top: calc(50% - 12px);
-        right: 96%;
-        clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
-        transform: rotate(45deg);
-        border-radius: 0 0 0 0.3em;
+
+.discounts{
+    margin-top: 15rem;
+    background-color: #414141;
+    color: $white;
+    height: 64.4rem;
+    &__row{
+        display: flex;
+    }
+    &__col{
+        width: 100%;
+    }
+    &__title{
+        padding-top: 11.6rem;
+        color: $white !important;
+    }
+    &__button{
+        width: 27.9rem;
+        height: 7.5rem;
+    }
+    p{
+
+        width: 85%;
+        padding-top: 4rem;
+        font-family: $font_3;
+    }
+    &__button{
+        margin-top: 5.2rem;
+    }
+    &__discounts__img{}
+    &__discounts__img img{
+        width: 100%;
     }
 }
-.advant-elem-right:nth-child(2n){
-    margin-left: 0%;
-    margin-top: 4rem;
-    background-color: #fff;
-}
-.advant-block::after{
-    top:95%;
-    position: absolute;
-    left: 50%;
-    content: url('../i/curve-line.png');
-    @include bp($point_0){
-        top:100%;
+.priceList{
+    margin-top: 32rem;
+    &__list{
+        margin-top: 7rem;
     }
-}
-.empty-height{
-    height: 10rem;
-}
-.catalog{
-    margin-top: 10rem;
+    &__item{
+        font-size: 2rem;
+        align-items: center;
+        height: 6.8rem;
+        padding-left: 15rem;
+        padding-right: 15rem;
+        background-color: #F4F4F4;;
+        display: flex;
+        justify-content: space-between;
+    }
+
 }

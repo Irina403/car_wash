@@ -6,6 +6,7 @@
   }
   
   .navbar {
+	padding-top: 2.3rem;
 	position: fixed;
 	width: 100%;
 	background: transparant;
@@ -77,6 +78,8 @@
   .contact-box{
 	display: flex;
 	align-items: center;
+	width: 100%;
+	justify-content: space-between;
 	&__phone-icon{
 		display: flex;
 		align-items: center;
@@ -92,6 +95,10 @@
 	}
 	&__messanger-icon {
 		margin-left: 3rem;
+	}
+	&__button-call{
+		width: 21.8rem;
+		height: 5.2rem;
 	}
   }
   @media (max-width: 1020px) {

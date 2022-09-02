@@ -1,58 +1,73 @@
 extends _layout
 block content_block
-	section_in
-		section.main 
-			.main__screen 
-				.main__title Свежая и вкусная <span> клубника </span> <br> оптом и в розницу
-				.main__btn.btn Заказать клубнику
-			.main__col
-				.main__col-img 
-					img(src="i/img-main.png", alt="")
+	section.main
+		.section_in 
+			h1 Лучшее оборудование для автомоек с доставкой в ваш регион!
+			.main__btn.btn-all 
+				a(href="#")  Скачать прайс-лист
 
-	
-	
-	.advant-block 
-		.visual-elem 
-			img(src="i/img-flower.png", alt="")
-			.section_in
-				.advant-block__title.title-block Наши преимущества
-				.advant-block__row 
-					.advant-block__col
-						.advant-elem
-							.advant-elem__item
-								.advant-elem__icon 
-									img(src="i/img-adwant.png", alt="")
-								.advant-elem__block
-									.advant-elem__title Качество продукта
-									.advant-elem__text Наша клубника не содержит вредных компонентов.
-				
-						.advant-elem
-							.advant-elem__item
-								.advant-elem__icon 
-									img(src="i/img-adwant.png", alt="")
-								.advant-elem__block(style="color:#000;")
-									.advant-elem__title Удобная доставка
-									.advant-elem__text Доставим по Краснодарскому краю и другим областям.
+	.section_in 
+		.advantages-block 
+			ul.advantages-block__list
+				-for(i = 1; i < 5; i++)
+					- title = ['' , 'Ассортимент' , 'Сервис' , 'Помощь' , 'Скидки']
+					- text = ['' , 'Большой выбор товаров для автомоек, включая химию' , 'Качественный сервис и грамотные менеджеры' , 'Помощь в выборе товаров и получении информации о них' , 'Скидки и бонусы при регулярных покупках в нашем магазине']
+					- src = 'i/icons/i-' + i + '.svg'
+					li.advantages-block__item
+						.advantages-block__img
+							img(src=`${src}`, alt="icons")
+						p.advantages-block__item-title!=title[i]
+						p.advantages-block__item-text!=text[i]
+
+	.section_in 	
+		.offer-block 
+			.offer-block__row 
+				.offer-block__col 		
+					img(src="i/img-block3.jpg", alt="img-block3")
+				.offer-block__col 
+					h2.title-block Обратитесь к нам <br> <span> прямо сейчас </span> за консультацией
+					.offer-block__text 
+						p Мы практикуем индивидуальный подход к каждому клиенту. Каждый заказ для нас – это отдельная задача, для которой мы внимательно прорабатываем оптимальное решение.
+						p Мы всегда готовы помочь с выбором лучшего оборудования для автомоек, которое подойдет именно для вашего дела.
+						.offer-block__button.btn-all 
+							a(href="#")  Оставить заявку
 					
-					.advant-block__col
-						.advant-elem-right
-							.advant-elem__item
-								.advant-elem__icon 
-									img(src="i/img-adwant.png", alt="")
-								.advant-elem__block
-									.advant-elem__title Качество продукта
-									.advant-elem__text Наша клубника не содержит вредных компонентов.
-				
-						.advant-elem-right
-							.advant-elem__item
-								.advant-elem__icon 
-									img(src="i/img-adwant.png", alt="")
-								.advant-elem__block(style="color:#000;")
-									.advant-elem__title Удобная доставка
-									.advant-elem__text Доставим по Краснодарскому краю и другим областям.
+					.offer-block__contacts
+						.offer-block__contacts-item 
+							img(src="i/icons/i-check.svg", alt="") 
+							p Скачайте весь прайс по 
+								a(href="#")  ссылке
+						.offer-block__contacts-item 
+							img(src="i/icons/i-check.svg", alt="") 
+							p Оставьте заявку или позвоните по телефону 
+								a(href="tel:+78632066888")  8 (863) 20-66-888
+	.discounts
+		.section_in
+			.discounts__row 
+				.discounts__col
+					h2.title-block.discounts__title Скидки на товары <br> для постоянных клиентов
+					p Приобретая товары в нашем магазине, вы всегда можете выгодно сэкономить! Для постоянных покупателей действует система скидок.
+					p Вы можете узнать о ней подробнее, оставив заявку на сайте.
 
-	.empty-height
-	.catalog 
-		.catalog__title.title-block Каталог продукции
-		.catalog__row 
-			
+					.discounts__button.btn-all 
+						a(href="#")  Оставить заявку
+				.discounts__col
+					.discounts__img
+						img(src="i/img-block4.png", alt="")
+	.section_in
+		.priceList 
+			h2.title-block-center Прайс-лист на все товары
+			ul.priceList__list
+				li.priceList__item
+					.priceList__item-text Название позиции
+					.priceList__item-count 500 руб.
+				li.priceList__item
+					.priceList__item-text Название позиции
+					.priceList__item-count 500 руб.
+
+		
+		
+
+
+
+		
