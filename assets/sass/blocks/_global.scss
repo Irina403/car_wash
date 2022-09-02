@@ -1,0 +1,28 @@
+.btn{
+    border-radius: 5rem;
+    background: #18B60C;
+    cursor: pointer;
+    width: 30.7rem;
+    height: 7.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+		font-family: $font_1;     
+}
+// .titleBlock{
+//     font-size: 6rem;
+//     font-family: $font_1;
+//     color: #000;
+//     text-transform: uppercase;
+//     line-height: 1.2;
+//     text-align: left;
+// 		@include bp ($point_3){
+// 			font-size: 4.2rem
+// 		}
+// }
+.title-block{
+    font-size: 4rem;
+    font-family: $font_1;
+    text-align: center;
+}
+
