@@ -17,11 +17,17 @@
     margin-bottom: 14rem;
     &__item{
         width: 23%;
+        @include bp($point_2){
+            width: 100%;
+        }
     }
     &__list{
         width: 100%;
         display: flex;
         justify-content: space-between;
+        @include bp($point_2){
+            flex-wrap: wrap;
+        }
     }
     &__img{
         margin-bottom: 2.5rem;
@@ -43,9 +49,21 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        @include bp($point_2){
+            flex-wrap: wrap;
+        }
     }
     &__col{
         width: 100%;
+     
+    }
+    &__col-right{
+        @include bp($point_1){
+            margin-left: 8rem;
+        }
+        @include bp($point_2){
+            margin-left: 0rem;
+        }
     }
     &__button{
         width: 27.9rem;
@@ -53,6 +71,9 @@
     }
     &__text{
         width: 90%;
+        @include bp($point_2){
+            width: 100%;
+        }
     }
     &__text p{
         margin-bottom: 2rem;
@@ -64,12 +85,18 @@
         margin-bottom: 3rem;
         display: flex;
         align-items: center;
+      
     }
     &__contacts-item img{
         margin-right: 2.5rem;
     }
     &__contacts-item a{
         color: $color3; 
+    }
+    &__contacts-item p{
+        @include bp($point_2){
+            width: 50%;
+        }
     }
 }
 
@@ -108,8 +135,12 @@
 }
 .priceList{
     margin-top: 32rem;
+        @include bp($point_1){
+            margin-top: 52rem;
+        }
     &__list{
         margin-top: 7rem;
+  
     }
     &__item{
         font-size: 2rem;
@@ -147,12 +178,106 @@
 .brands {
     margin-top: 18rem;
     &__list{
+        margin-bottom: 22.4rem;
         margin-top: 9.9rem;
         display: flex;
         justify-content: space-between;
     
-        @include bp($point_4){
+        @include bp($point_1){
             flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+.reviews {
+    width: 100%;
+    &__list{
+        margin-top: 8rem;
+        display: flex;
+        justify-content: space-between;
+       
+    }
+}
+.item-rev{
+    position: relative;
+    background-color:#414141;
+    color:#fff;
+    padding: 4rem 3.2rem;
+    border-radius:1rem;
+    margin-right: 3.3rem;
+
+    &__name {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-family: $font_3;
+    }
+    &__stars-icon{
+        margin-bottom: 2.4rem;
+    }
+    &__text{
+        margin-bottom: 2.4rem;
+        font-size: 1.8rem;
+    }
+    &__collaps {
+        text-decoration: underline;
+    }
+    &__elem{
+        position: absolute;
+        right: 68px;
+        bottom: -20px;
+    }
+}
+.map {
+    margin-top: 18rem;
+    img{
+        width: 100%;
+    }
+}
+.contacts{
+    margin-top: 9rem;
+    &__list{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__name{
+        font-size: 2.2rem;
+        // font-family: font_2;
+    }
+    &__item{
+        display: flex;
+        align-items:flex-start;
+    }
+    &__item a{
+        text-decoration: none;
+        color: #282828;
+
+    }
+    &__item div{
+        margin-left: 3rem;
+    }
+    &__txt {
+        margin-top: 1rem;
+    }
+    &__social a{
+        margin-right: 2rem;
+    }
+    &__footer{
+        margin-top: 7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        a{
+            color:#282828;
+        }
+    }
+    &__arkada{
+        display: flex;
+        align-items:center;
+        img{
+            margin-left: 1rem;
+        }
+        a{
+            text-decoration: none;
         }
     }
 }

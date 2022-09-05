@@ -4,9 +4,14 @@
   .navbar .hamburger-lines {
 	display: none;
   }
-  
+  .contact-box__messanger-mobile{
+	display: none;
+}
+.logo-icon-mobile{
+	display: none;
+}
   .navbar {
-	padding-top: 2.3rem;
+	// padding-top: 2.3rem;
 	position: fixed;
 	width: 100%;
 	background: transparant;
@@ -15,8 +20,8 @@
 	z-index: 12;
   
   &__flex{
-	padding-top: 1.2rem;
-	height:11rem;
+	// padding-top: 1.2rem;
+	height:13rem;
 	display: flex;
 	justify-content: space-between;
   }
@@ -101,8 +106,40 @@
 		height: 5.2rem;
 	}
   }
-  @media (max-width: 1020px) {
+
+// .contact-box__button-call{
+// 	margin-top: 3.5rem;
+// }
+.contact-box__tel{
+	display: none;
+}
+  @media (max-width: 1200px) {
+	.contact-box__tel{
+		margin-top: 25px;
+	}
+	.navbar {
+		padding-top: 0rem;
+	}
+	.logo-icon-desc{
+		display: none;
+	}
+	.contact-box__button-call{
+		display: none !important;
+	}
+	.contact-box__messanger-desck{
+		display: none;
+	}
+	.contact-box__messanger-mobile{
+		display: flex;
+	}
+	.contact-box__messanger-icon{
+		margin-top: 5.5rem;
+		margin-left: 0rem;
+		margin-right: 3rem;
+	}
 	.contact-box{
+		display: flex;
+		justify-content: center;
 		position: absolute;
 		top: 1rem;
 		right: 1rem;
@@ -121,6 +158,7 @@
 	  display: block;
 	  position: relative;
 	  height: 6.4rem;
+	  width: 100%;
 	}
   
 	.navbar-container input[type="checkbox"] {
@@ -129,9 +167,10 @@
 	  height: 32px;
 	  width: 30px;
 	  top: 2rem;
-	  left: 2rem;
+	//   left: 2rem;
 	  z-index: 5;
 	  opacity: 0;
+	  width: 100%;
 	}
   
 	.navbar-container .hamburger-lines {
@@ -140,7 +179,8 @@
 	  width: 35px;
 	  position: absolute;
 	  top: 17px;
-	  left: 5px;
+	  right: 10px;
+	//   left: 5px;
 	  z-index: 2;
 	  display: flex;
 	  flex-direction: column;
@@ -171,15 +211,17 @@
 	}
   
 	.navbar .menu-items {
-	  padding-top: 100px;
+	margin-top: -10px;
+	  padding-left: 30px;
+	  padding-top: 10px;
 	  background: #fff;
 	  color:#000;
 	  height: 100vh;
-	  max-width: 300px;
+	  max-width: 400px;
 	  transform: translate(-150%);
 	  display: flex;
 	  flex-direction: column;
-	  margin-left: -40px;
+	  margin-left: -25px;
 	//   padding-left: 50px;
 	  transition: transform 0.5s ease-in-out;
 	  box-shadow: 5px 0px 10px 0px #aaa;
@@ -216,5 +258,8 @@
   
 	.navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
 	  transform: rotate(-35deg);
+	}
+	.logo-icon-mobile{
+		margin-bottom: 3.2rem;
 	}
   }  

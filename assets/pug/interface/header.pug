@@ -9,11 +9,14 @@ header
 						span.line.line2
 						span.line.line3
 
-					.logo-icon
+					.logo-icon.logo-icon-desc
 						.logo-icon__img 
 							img(src="i/icons/logo.svg", alt="")
 					
 					ul.menu-items.menu-toggle-open
+						.logo-icon.logo-icon-mobile
+							.logo-icon__img 
+								img(src="i/icons/logo.svg", alt="")
 						li.navItem
 							a(href="#advant") Преимущества
 						li.navItem
@@ -26,12 +29,22 @@ header
 							a(href="#about-us") Отзывы
 						li.navItem
 							a(href="#contact") Контакты
+						.contact-box__messanger-mobile
+							.contact-box__messanger-icon 
+								img(src="i/icons/i-telega.svg", alt="")
+							.contact-box__messanger-icon 
+								img(src="i/icons/i-whatsapp.svg", alt="")
+						.contact-box__tel 
+							div
+								a(href="tel:+78632066888") 8 (863) 20-66-888
+							div
+								a(href="tel:+79662066888") 8 (966) 20-66-888
 							
 				.contact-box
 					//- .contact-box__phone-icon 
 					//- 	img(src="i/icons/i-phone.svg", alt="")
 					//- 	a(href="tel:+79182617028") 8 (918) 261-70-28
-					.contact-box__messanger
+					.contact-box__messanger.contact-box__messanger-desck
 						.contact-box__messanger-icon 
 							img(src="i/icons/i-telega.svg", alt="")
 						.contact-box__messanger-icon 
