@@ -121,5 +121,38 @@
         display: flex;
         justify-content: space-between;
     }
+    &__button{
+        margin-top: 7rem;
+        display: flex;
+        justify-content: center;
 
+    }
+    &__butn{
+        width: 31.7rem;
+        height: 7.5rem;
+    }
+
+}
+.btn-border{
+    width: 31.7rem;
+    height: 7.5rem;
+    border: 1px solid $color3 ;
+    background-color: #FFF !important;
+    margin-right: 1rem;
+    
+    a{
+        color:$color3 !important;
+    }
+}
+.brands {
+    margin-top: 18rem;
+    &__list{
+        margin-top: 9.9rem;
+        display: flex;
+        justify-content: space-between;
+    
+        @include bp($point_4){
+            flex-wrap: wrap;
+        }
+    }
 }
