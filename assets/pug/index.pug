@@ -7,8 +7,19 @@ block content_block
 				a(href="#")  Скачать прайс-лист
 
 	.section_in 
-		.advantages-block 
-			ul.advantages-block__list
+		.advantages-block#advant 
+			ul.advantages-block__list.advantages-block__desck
+				-for(i = 1; i < 5; i++)
+					- title = ['' , 'Ассортимент' , 'Сервис' , 'Помощь' , 'Скидки']
+					- text = ['' , 'Большой выбор товаров для автомоек, включая химию' , 'Качественный сервис и грамотные менеджеры' , 'Помощь в выборе товаров и получении информации о них' , 'Скидки и бонусы при регулярных покупках в нашем магазине']
+					- src = 'i/icons/i-' + i + '.svg'
+					li.advantages-block__item
+						.advantages-block__img
+							img(src=`${src}`, alt="icons")
+						p.advantages-block__item-title!=title[i]
+						p.advantages-block__item-text!=text[i]
+			
+			ul.advantages-block__mobile
 				-for(i = 1; i < 5; i++)
 					- title = ['' , 'Ассортимент' , 'Сервис' , 'Помощь' , 'Скидки']
 					- text = ['' , 'Большой выбор товаров для автомоек, включая химию' , 'Качественный сервис и грамотные менеджеры' , 'Помощь в выборе товаров и получении информации о них' , 'Скидки и бонусы при регулярных покупках в нашем магазине']
@@ -22,14 +33,14 @@ block content_block
 	.section_in 	
 		.offer-block 
 			.offer-block__row 
-				.offer-block__col 		
+				.offer-block__col.offer-block__img 		
 					img(src="i/img-block3.jpg", alt="img-block3")
 				.offer-block__col.offer-block__col-right 
-					h2.title-block Обратитесь к нам <br> <span> прямо сейчас </span> за консультацией
+					h2.title-block#promotions Обратитесь к нам <br> <span> прямо сейчас </span> за консультацией
 					.offer-block__text 
 						p Мы практикуем индивидуальный подход к каждому клиенту. Каждый заказ для нас – это отдельная задача, для которой мы внимательно прорабатываем оптимальное решение.
 						p Мы всегда готовы помочь с выбором лучшего оборудования для автомоек, которое подойдет именно для вашего дела.
-						.offer-block__button.btn-all 
+						.offer-block__button.offer-block__button.btn-all.js-open-modal(data-modal="call").offer-block__button-mobile  
 							a(href="#")  Оставить заявку
 					
 					.offer-block__contacts
@@ -49,14 +60,14 @@ block content_block
 					p Приобретая товары в нашем магазине, вы всегда можете выгодно сэкономить! Для постоянных покупателей действует система скидок.
 					p Вы можете узнать о ней подробнее, оставив заявку на сайте.
 
-					.discounts__button.btn-all 
+					.discounts__button.btn-all.js-open-modal(data-modal="call")   
 						a(href="#")  Оставить заявку
 				.discounts__col
 					.discounts__img
 						img(src="i/img-block4.png", alt="")
 	.section_in
 		.priceList 
-			h2.title-block-center Прайс-лист на все товары
+			h2.title-block-center#price Прайс-лист <span> на все товары </span>
 			ul.priceList__list
 				li.priceList__item
 					.priceList__item-text Название позиции
@@ -65,14 +76,14 @@ block content_block
 					.priceList__item-text Название позиции
 					.priceList__item-count 500 руб.
 			.priceList__button
-				.btn-all.btn-border 
+				.btn-all.btn-border.js-open-modal(data-modal="call")   
 					a(href="#") Оставить заявку
-				.priceList__butn.btn-all
+				.priceList__butn.btn-all.js-open-modal(data-modal="price") 
 					a(href="") Скачать весь прайс
 
 	.section_in 
 		.brands 
-			h2.title-block-center У нас представлены бренды
+			h2.title-block-center#brands У нас <span> представлены бренды </span>
 			.brands__list 
 				.brands__item 
 					img(src="i/icons/i-brand1.svg", alt="")
@@ -84,16 +95,27 @@ block content_block
 					img(src="i/icons/i-brand4.svg", alt="")
 				.brands__item 
 					img(src="i/icons/i-brand5.svg", alt="")
+			
+			.brands__list-mobile 
+				.brands__item 
+					img(src="i/icons/i-brand1-mobile.svg", alt="")
+				.brands__item 
+					img(src="i/icons/i-brand2-mobile.svg", alt="")
+				.brands__item 
+					img(src="i/icons/i-brand3-mobile.svg", alt="")
+				.brands__item 
+					img(src="i/icons/i-brand4-mobile.svg", alt="")
+
 	.section_in 
 		.reviews 
-			h2.title-block-center Отзывы довольных клиентов
+			h2.title-block-center#reviews Отзывы <span> довольных клиентов </span>
 			.reviews__list 
 				.reviews__item.item-rev 
 					.item-rev__name Валентин
 					.item-rev__stars-icon 
 						img(src="i/icons/i-stars.svg", alt="")
 					.item-rev__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					.item-rev__collaps Показать весь отзыв
+					.item-rev__collaps.js-open-modal(data-modal="reviews-1")   Показать весь отзыв
 					.item-rev__elem 
 						img(src="i/icons/i-q-slider.svg", alt="")
 				.reviews__item.item-rev 
@@ -101,7 +123,7 @@ block content_block
 					.item-rev__stars-icon 
 						img(src="i/icons/i-stars.svg", alt="")
 					.item-rev__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					.item-rev__collaps Показать весь отзыв
+					.item-rev__collaps.js-open-modal(data-modal="reviews-2")  Показать весь отзыв
 					.item-rev__elem 
 						img(src="i/icons/i-q-slider.svg", alt="")
 				.reviews__item.item-rev 
@@ -109,7 +131,7 @@ block content_block
 					.item-rev__stars-icon 
 						img(src="i/icons/i-stars.svg", alt="")
 					.item-rev__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					.item-rev__collaps Показать весь отзыв
+					.item-rev__collaps.js-open-modal(data-modal="reviews-3")  Показать весь отзыв
 					.item-rev__elem 
 						img(src="i/icons/i-q-slider.svg", alt="")
 				.reviews__item.item-rev 
@@ -117,13 +139,13 @@ block content_block
 					.item-rev__stars-icon 
 						img(src="i/icons/i-stars.svg", alt="")
 					.item-rev__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					.item-rev__collaps Показать весь отзыв
+					.item-rev__collaps.js-open-modal(data-modal="reviews-4")  Показать весь отзыв
 					.item-rev__elem 
 						img(src="i/icons/i-q-slider.svg", alt="")
 	
 	.section_in 
 		.map 
-			img(src="i/map.jpg", alt="")
+			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acad7fab8af3ec305d923bb12ebfb3e1eeb9b08fb2851a82425599f7804acb1ac&amp;source=constructor" width="100%" height="527" frameborder="0"></iframe>
 	
 
 

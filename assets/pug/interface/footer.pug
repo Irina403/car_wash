@@ -1,6 +1,6 @@
 footer
     .section_in
-        .contacts 
+        .contacts#contact 
             .contacts__list 
                 .contacts__item 
                     img(src="i/icons/i-map.svg", alt="")
@@ -30,6 +30,10 @@ footer
                                 img(src="i/icons/i-telega-footer.svg", alt="")
                             a(href="#")
                                 img(src="i/icons/i-whatsapp-footer.svg", alt="")
+            .map-mobile 
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acad7fab8af3ec305d923bb12ebfb3e1eeb9b08fb2851a82425599f7804acb1ac&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe>
+
+        
         .contacts__footer
             .contacts__copyright © 2022 Все права защищены
             .contacts__politica
@@ -39,7 +43,7 @@ footer
                 img(src="i/icons/i-arkada-logo.svg", alt="")
     
     .overlay.js-modal-overlay 
-    .modal-contact(data-modal="price")
+    .modal-contact(data-modal="call")
       
         .modal-contact__close 
             img(src="i/icons/i-close.svg", alt="")  
@@ -51,9 +55,51 @@ footer
             input(type="text" placeholder="Ваше имя")
             input(type="tel" placeholder="Ваш телефон")
             .submit-button Отправить
+            .check-block
+                input.custom-checkbox#myCheckbox(type="checkbox")
+                label(for="myCheckbox") Отправляя информацию, вы соглашаетесь <br> 
+                    a(href="#")  c политикой конфиденциальности. 
 
-            input.custom-checkbox#myCheckbox(type="checkbox")
-                label(for="myCheckbox") Отправляя информацию, вы соглашаетесь c 
-                    a(href="#")  политикой конфиденциальности. 
+    
+    .modal-contact(data-modal="price")
+        .modal-contact__close 
+            img(src="i/icons/i-close.svg", alt="")  
+
+        .modal-contact__title Оставьте свои контакты
+        .modal-contact__text И скачайте наш полный прайс!
+
+        form.contact-form(action="")
+            input(type="text" placeholder="Ваше имя")
+            input(type="tel" placeholder="Ваш телефон")
+            .submit-button Отправить
+            .check-block
+                input.custom-checkbox#myCheckbox(type="checkbox")
+                label(for="myCheckbox") Отправляя информацию, вы соглашаетесь <br> 
+                    a(href="#")  c политикой конфиденциальности. 
 
 
+    .modal-contact(data-modal="reviews-1")
+        .modal-contact__close 
+            img(src="i/icons/i-close.svg", alt="")
+
+        .modal-contact__riviews Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
+
+
+    .modal-contact(data-modal="reviews-2")
+        .modal-contact__close 
+            img(src="i/icons/i-close.svg", alt="")
+
+        .modal-contact__riviews Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
+
+    .modal-contact(data-modal="reviews-3")
+        .modal-contact__close 
+            img(src="i/icons/i-close.svg", alt="")
+
+        .modal-contact__riviews Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
+
+
+    .modal-contact(data-modal="reviews-4")
+        .modal-contact__close 
+            img(src="i/icons/i-close.svg", alt="")
+
+        .modal-contact__riviews Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  

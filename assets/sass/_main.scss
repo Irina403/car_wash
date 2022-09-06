@@ -20,6 +20,12 @@
         @include bp($point_2){
             width: 100%;
         }
+        @include bp($point_4){
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
     }
     &__list{
         width: 100%;
@@ -41,9 +47,28 @@
     &__item-text{
         font-size: 1.8rem;
         color: $gray;
+        @include bp($point_4){
+            text-align: center;
+        }
+    }
+    &__desck{
+        @include bp($point_4){
+            display: none;
+        }
+    }
+    // &__mobile{
+    //     display: none;
+    //     @include bp($point_4){
+    //         display: block;
+    //     }
+    // }
+}
+ul.advantages-block__mobile{
+    display: none;
+    @include bp($point_4){
+        display: block;
     }
 }
-
 .offer-block{
     &__row{
         width: 100%;
@@ -53,15 +78,32 @@
             flex-wrap: wrap;
         }
     }
+    &__img img{
+        width: 100%;
+    }
+    &__img {
+        @include bp ($point_4){
+            margin-left: -20px;
+        }
+    }
     &__col{
         width: 100%;
      
     }
+
+    // &__col img{
+    //     width: 100%;
+     
+    // }
     &__col-right{
+        margin-left: 10rem;
         @include bp($point_1){
             margin-left: 8rem;
         }
         @include bp($point_2){
+            margin-left: 0rem;
+        }
+        @include bp($point_4){
             margin-left: 0rem;
         }
     }
@@ -97,16 +139,30 @@
         @include bp($point_2){
             width: 50%;
         }
+        @include bp($point_4){
+            width: 100%;
+        }
     }
 }
-
+.offer-block__button-mobile{
+    @include bp ($point_4){
+        display: none !important;
+    }
+}
 .discounts{
     margin-top: 15rem;
     background-color: #414141;
     color: $white;
     height: 64.4rem;
+    @include bp($point_4){
+        margin-top: 0rem;
+        height: 77rem;
+    }
     &__row{
         display: flex;
+        @include bp($point_5){
+            flex-wrap: wrap;
+        }
     }
     &__col{
         width: 100%;
@@ -114,6 +170,9 @@
     &__title{
         padding-top: 11.6rem;
         color: $white !important;
+        @include bp($point_4){
+            padding-top: 6rem;
+        }
     }
     &__button{
         width: 27.9rem;
@@ -128,15 +187,26 @@
     &__button{
         margin-top: 5.2rem;
     }
-    &__discounts__img{}
-    &__discounts__img img{
+    &__img{
         width: 100%;
+        @include bp($point_4){
+            margin-top: 7rem;
+        }
+    }
+    &__img img{
+        width: 100%;
+        @include bp($point_4){
+            margin-left: 20px;
+        }
     }
 }
 .priceList{
     margin-top: 32rem;
         @include bp($point_1){
-            margin-top: 52rem;
+            margin-top: 32rem;
+        }
+        @include bp($point_4){
+            margin-top: 32rem;
         }
     &__list{
         margin-top: 7rem;
@@ -151,16 +221,27 @@
         background-color: #F4F4F4;;
         display: flex;
         justify-content: space-between;
+        @include bp($point_4){
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
     }
     &__button{
         margin-top: 7rem;
         display: flex;
         justify-content: center;
+        @include bp($point_4){
+            flex-direction: column;
+            align-items:center;
+        }
 
     }
     &__butn{
         width: 31.7rem;
         height: 7.5rem;
+        @include bp($point_4){
+            width: 100%;
+        }
     }
 
 }
@@ -170,6 +251,10 @@
     border: 1px solid $color3 ;
     background-color: #FFF !important;
     margin-right: 1rem;
+    @include bp($point_4){
+        width: 100%;
+        margin-bottom: 2rem;
+    }
     
     a{
         color:$color3 !important;
@@ -177,6 +262,9 @@
 }
 .brands {
     margin-top: 18rem;
+    @include bp($point_4){
+       margin-top: 3rem;
+    }
     &__list{
         margin-bottom: 22.4rem;
         margin-top: 9.9rem;
@@ -187,10 +275,31 @@
             flex-wrap: wrap;
             justify-content: center;
         }
+        @include bp($point_4){
+            display: none;
+        }
     }
+    &__list-mobile{
+        display: none;
+        @include bp($point_4){
+            margin-top: 4.7rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    // &__item {
+    //     @include bp($point_4){
+    //         width: 30%;
+    //     }
+    // }
 }
+
 .reviews {
     width: 100%;
+    @include bp($point_4){
+        margin-top: 7rem;
+    }
     &__list{
         margin-top: 8rem;
         display: flex;
@@ -220,16 +329,36 @@
     }
     &__collaps {
         text-decoration: underline;
+        cursor: pointer;
     }
+
     &__elem{
         position: absolute;
         right: 68px;
         bottom: -20px;
     }
 }
+.modal-contact__riviews{
+    padding: 2rem;
+}
 .map {
     margin-top: 18rem;
+    @include bp ($point_4){
+        display: none;
+    }
     img{
+        width: 100%;
+    }
+}
+.map-mobile {
+    display: none;
+    @include bp ($point_4){
+        display: block;
+        width: 100%;
+    }
+}
+.map-mobile img{
+    @include bp ($point_4){
         width: 100%;
     }
 }
@@ -238,6 +367,9 @@
     &__list{
         display: flex;
         justify-content: space-between;
+        @include bp ($point_4){
+            flex-direction: column;
+        }
     }
     &__name{
         font-size: 2.2rem;
@@ -246,6 +378,9 @@
     &__item{
         display: flex;
         align-items:flex-start;
+        @include bp ($point_4){
+            margin-bottom: 5.2rem;
+        }
     }
     &__item a{
         text-decoration: none;
@@ -261,14 +396,36 @@
     &__social a{
         margin-right: 2rem;
     }
+    &__footer div{
+        @include bp ($point_4){
+            margin-bottom: 1rem;
+        }
+    }
     &__footer{
         margin-top: 7rem;
         display: flex;
         justify-content: space-between;
         align-items:center;
+        @include bp ($point_4){
+            padding-top: 25px;
+            padding-bottom: 25px;
+            flex-direction: column;
+            background-color:#414141;
+            margin-left: -20px;
+            margin-right: -20px;
+            color:#fff;
+        }
+
         a{
             color:#282828;
+            @include bp ($point_4){
+                color:#fff;
+
+            }
         }
+    }
+    span{
+        font-weight: 600;
     }
     &__arkada{
         display: flex;
@@ -285,11 +442,17 @@
 /* Слайды */
 .slick-slide {
     margin: 0 26px;
+    @include bp ($point_4){
+       margin: 0 0px;
+    }
   }
   
   /* Родительский элемент */
   .slick-list {
     margin: 0 -26px;
+    @include bp ($point_4){
+        margin: 0 0px;
+     }
   }
 .slick-list.draggable{
     padding-bottom: 20px;
@@ -338,7 +501,7 @@
 }
 .modal-contact{
     width: 70rem;
-    height: 54.3rem;
+    // height: 54.3rem;
     display: none;
     position: fixed;
     top: 50%;
@@ -355,8 +518,12 @@
     -o-transition: display 0.6s;
     transition: display 0.6s; 
     z-index: 9999;
+    @include bp($point_4){
+        width: 100%;
+    }
     &__close {
         text-align: right;
+        cursor:pointer;
     }
     &__title{
         font-size: 4rem;
@@ -382,9 +549,18 @@
         border-radius:10px;
         border:none;
         margin: 10px auto;
+        @include bp($point_4){
+            width: 100%;
+        }
+    }
+}
+.check-block label{
+    @include bp($point_4){
+        font-size: 14px;
     }
 }
 .submit-button{
+    border-radius:10px;
     margin: auto;
     background-color:$color3;
     width: 45rem;
@@ -393,16 +569,25 @@
     display: flex;
     align-items:center;
     justify-content: center;
+    @include bp($point_4){
+        width: 100%;
+    }
 }
 .custom-checkbox {
     position: absolute;
     z-index: -1;
     opacity: 0;
   }
+.check-block{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
 
+    }
   .custom-checkbox + label {
+    text-align: center;
     cursor: pointer;
-    display: inline-flex;
+    // display: inline-flex;
     align-items: center;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -410,10 +595,11 @@
     user-select: none;
   }
   .custom-checkbox + label::before {
+    text-align: center;
     content: '';
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 2.5rem;
+    height: 2.5rem;
     flex-shrink: 0;
     flex-grow: 0;
     border: 1px solid #c3c3c3;
@@ -424,21 +610,23 @@
     background-size: 50% 50%;
   }
   .custom-checkbox + label {
+    text-align: center;
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    // display: inline-flex;
+    // align-items: center;
+    // -webkit-user-select: none;
+    // -moz-user-select: none;
+    // -ms-user-select: none;
     user-select: none;
   }
   .custom-checkbox + label::before {
     content: '';
-    display: inline-block;
+    // display: inline-block;
     width: 2.5rem;
     height: 2.5rem;
     flex-shrink: 0;
     flex-grow: 0;
+    text-align: center;
     // border: 1px solid #c3c3c3;
     border-radius: 0.25em;
     margin-right: 0.5em;

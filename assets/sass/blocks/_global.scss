@@ -15,7 +15,7 @@
 }
 .btn-all:hover{
     background: #D14B00;
-    box-shadow: 4px 37px 41px rgba(255, 92, 0, 0.25);
+    box-shadow: 4px 30px 35px rgba(255, 92, 0, 0.25);
 
 }
 
@@ -32,11 +32,18 @@ h1{
         padding-top: 30rem;
         width: 100%;
     }
+    @include bp($point_5){
+        font-size: 30px;
+    }
 }
 .title-block{
     font-size: 4rem;
     font-family: $font_1;
     color: $black;
+    @include bp($point_4){
+        font-size: 28px;
+        line-height: 32px;
+    }
 }
 .title-block span{
     font-family: $font_2;
@@ -57,4 +64,12 @@ h1{
     color: $black;
     font-family: $font_1;
     text-align: center;
+    @include bp($point_4){
+        font-size: 28px;
+        line-height: 32px;
+        text-align: left;
+    }
+}
+span{
+    font-family: $font_2;
 }
