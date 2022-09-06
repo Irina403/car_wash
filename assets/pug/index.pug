@@ -3,7 +3,7 @@ block content_block
 	section.main
 		.section_in 
 			h1 Лучшее оборудование для автомоек с доставкой в ваш регион!
-			.main__btn.btn-all 
+			.main__btn.btn-all.js-open-modal(data-modal="price") 
 				a(href="#")  Скачать прайс-лист
 
 	.section_in 
@@ -112,11 +112,20 @@ block content_block
 					.item-rev__collaps Показать весь отзыв
 					.item-rev__elem 
 						img(src="i/icons/i-q-slider.svg", alt="")
+				.reviews__item.item-rev 
+					.item-rev__name Валентин
+					.item-rev__stars-icon 
+						img(src="i/icons/i-stars.svg", alt="")
+					.item-rev__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					.item-rev__collaps Показать весь отзыв
+					.item-rev__elem 
+						img(src="i/icons/i-q-slider.svg", alt="")
 	
 	.section_in 
 		.map 
 			img(src="i/map.jpg", alt="")
 	
+
 
 
 

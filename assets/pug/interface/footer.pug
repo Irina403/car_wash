@@ -37,6 +37,23 @@ footer
             .contacts__arkada 
                 a(href="#") Разработано arkada-web.ru
                 img(src="i/icons/i-arkada-logo.svg", alt="")
+    
+    .overlay.js-modal-overlay 
+    .modal-contact(data-modal="price")
+      
+        .modal-contact__close 
+            img(src="i/icons/i-close.svg", alt="")  
 
-                                    
+        .modal-contact__title Оставьте свои контакты
+        .modal-contact__text И мы свяжемся с вами!
+
+        form.contact-form(action="")
+            input(type="text" placeholder="Ваше имя")
+            input(type="tel" placeholder="Ваш телефон")
+            .submit-button Отправить
+
+            input.custom-checkbox#myCheckbox(type="checkbox")
+                label(for="myCheckbox") Отправляя информацию, вы соглашаетесь c 
+                    a(href="#")  политикой конфиденциальности. 
+
 
